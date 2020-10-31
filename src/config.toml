@@ -6,7 +6,7 @@ url             = "opc.tcp://192.168.9.200:4845"
 # The InfluxDB connection parameters. Use a connection url containing all 
 # details, ie. http(s)://user:password@host:port/database
 [influx]
-url              = "http://user:password@localhost:8086/mydb"
+url              = "http://34.74.136.250:8060/mydb"
 writeInterval    = 1000          # optional. defaults to 1000ms
 writeMaxPoints   = 1000          # optional. defaults to 1000 points
 
