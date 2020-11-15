@@ -1,12 +1,12 @@
 # The OPCUA connection parameters. If you want to use anonymous auth, 
 # remove the username and password lines.
 [opcua]
-url             = "opc.tcp://192.168.9.200:4845"
+url             = "opc.tcp://192.168.9.220:4845"
 
 # The InfluxDB connection parameters. Use a connection url containing all 
 # details, ie. http(s)://user:password@host:port/database
 [influx]
-url              = "http://34.74.136.250:8060/mydb"
+url              = "http://35.229.36.6:8086/mydb"
 writeInterval    = 1000          # optional. defaults to 1000ms
 writeMaxPoints   = 1000          # optional. defaults to 1000 points
 
@@ -16,7 +16,7 @@ writeMaxPoints   = 1000          # optional. defaults to 1000 points
 measurement        = "HLA_D592_1"
 datatype           = "boolean"
 tags               = { simulation = "false", location = "yanbu" }
-nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.HLA_D592_1"
+nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.DI_DATA.HLA_D592_1.BL_LIMIT_SWITCH"
 method             = "monitored"
 interval           = 5000  
 
@@ -24,7 +24,7 @@ interval           = 5000
 measurement        = "LLA_D592_2"
 datatype           = "boolean"
 tags               = { simulation = "false", location = "yanbu" }
-nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.LLA_D592_2"
+nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.DI_DATA.LLA_D592_2.BL_LIMIT_SWITCH"
 method             = "monitored"
 interval           = 5000  
 
@@ -32,23 +32,40 @@ interval           = 5000
 measurement        = "HLA_D577_1_1"
 datatype           = "boolean"
 tags               = { simulation = "false", location = "yanbu" }
-nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.HLA_D577_1_1"
+nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.DI_DATA.HLA_D577_1_1.BL_LIMIT_SWITCH"
 method             = "monitored"
 interval           = 5000  
 
 [[metrics]]
-measurement        = "LLA_D577_1_2"
+measurement        = "HLA_D577_1_1"
 datatype           = "boolean"
 tags               = { simulation = "false", location = "yanbu" }
-nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.LLA_D577_1_2"
+nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.HLA_D577_1_1.BL_LIMIT_SWITCH"
 method             = "monitored"
 interval           = 5000  
+
+[[metrics]]
+measurement        = "LLA_D576"
+datatype           = "boolean"
+tags               = { simulation = "false", location = "yanbu" }
+nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.DI_DATA.LLA_D576_2.BL_LIMIT_SWITCH"
+method             = "monitored"
+interval           = 5000  
+
+[[metrics]]
+measurement        = "HLA_D576"
+datatype           = "boolean"
+tags               = { simulation = "false", location = "yanbu" }
+nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.DI_DATA.HLA_D576_1.BL_LIMIT_SWITCH"
+method             = "monitored"
+interval           = 5000 
+
 
 [[metrics]]
 measurement        = "HLA_D577_2_1"
 datatype           = "boolean"
 tags               = { simulation = "false", location = "yanbu" }
-nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.HLA_D577_2_1"
+nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.DI_DATA.HLA_D577_2_1.BL_LIMIT_SWITCH"
 method             = "monitored"
 interval           = 5000  
 
@@ -56,7 +73,7 @@ interval           = 5000
 measurement        = "LLA_D577_2_2"
 datatype           = "boolean"
 tags               = { simulation = "false", location = "yanbu" }
-nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.LLA_D577_2_2"
+nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.DI_DATA.LLA_D577_2_2.BL_LIMIT_SWITCH"
 method             = "monitored"
 interval           = 5000  
 
@@ -64,7 +81,7 @@ interval           = 5000
 measurement        = "HLA_D577_3_1"
 datatype           = "boolean"
 tags               = { simulation = "false", location = "yanbu" }
-nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.HLA_D577_3_1"
+nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.DI_DATA.HLA_D577_3_1.BL_LIMIT_SWITCH"
 method             = "monitored"
 interval           = 5000  
 
@@ -72,7 +89,7 @@ interval           = 5000
 measurement        = "LLA_D577_3_2"
 datatype           = "boolean"
 tags               = { simulation = "false", location = "yanbu" }
-nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.LLA_D577_3_2"
+nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.DI_DATA.LLA_D577_3_2.BL_LIMIT_SWITCH"
 method             = "monitored"
 interval           = 5000  
 
@@ -80,7 +97,7 @@ interval           = 5000
 measurement        = "HLA_D577_4_1"
 datatype           = "boolean"
 tags               = { simulation = "false", location = "yanbu" }
-nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.HLA_D577_4_1"
+nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.DI_DATA.HLA_D577_4_1.BL_LIMIT_SWITCH"
 method             = "monitored"
 interval           = 5000  
 
@@ -88,7 +105,7 @@ interval           = 5000
 measurement        = "LLA_D577_4_2"
 datatype           = "boolean"
 tags               = { simulation = "false", location = "yanbu" }
-nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.LLA_D577_4_2"
+nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.DI_DATA.LLA_D577_4_2.BL_LIMIT_SWITCH"
 method             = "monitored"
 interval           = 5000  
 
@@ -97,7 +114,7 @@ interval           = 5000
 ## water tank
 
 [[metrics]]
-measurement        = "LCV_D532_1"
+measurement        = "LT_D532"
 datatype           = "number"
 tags               = { simulation = "false", location = "yanbu" }
 nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.LCV_D532_1.PV_0_100"
@@ -260,4 +277,31 @@ datatype           = "number"
 tags               = { simulation = "false", location = "yanbu" }
 nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.AI_DATA.LT_D739_2.PV_0_100"
 method             = "polled"
+interval           = 1000 
+
+
+[[metrics]]
+measurement        = "TCV_D720"
+datatype           = "number"
+tags               = { simulation = "false", location = "yanbu" }
+nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.TCV_720.PV_ENGIN_VALUE"
+method             = "polled"
 interval           = 1000     
+
+
+[[metrics]]
+measurement        = "TCV_D820"
+datatype           = "number"
+tags               = { simulation = "false", location = "yanbu" }
+nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.TCV_820.PV_ENGIN_VALUE"
+method             = "polled"
+interval           = 1000  
+
+[[metrics]]
+measurement        = "TCV_D830"
+datatype           = "number"
+tags               = { simulation = "false", location = "yanbu" }
+nodeId             = "ns=7;s=SIMATIC 400(1).CPU 414-3 PNDP.TCV_830.PV_ENGIN_VALUE"
+method             = "polled"
+interval           = 1000  
+    
